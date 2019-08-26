@@ -926,7 +926,7 @@ public class JsonTest {
 
 
     // Output to file
-    BufferedWriter out = new BufferedWriter(new FileWriter("Web/" + filename));
+    BufferedWriter out = new BufferedWriter(new FileWriter("Web/json/" + filename));
     out.write(container.toString(2));
     out.close();
   }
