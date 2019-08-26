@@ -287,19 +287,20 @@ function loadFile(event) {
               }).style('display', 'none');
               cy.elements('edge.no-domain-show').style('display', 'element');
 
-              // When a matched protein that is a protein-target has interologous partners that are all domain-targets, it needs to be moved
+              // When a matched protein that is a protein-target has interologous partners that are all only domain-targets, it needs to be moved
               // into unmatched when all its domain-target partners are hidden.
               cy.$(function (element, i) {
                 return element.isNode() && element.hasClass('protein-target') && element.hasClass('interolog') && element.hasClass('matched');
               }).filter(function(node) {
                 for (i=0; i<node.data('partners').length; i++) {
                   var partnerNode = cy.$('#' + node.data('partners')[i]);
-                  if (partnerNode.hasClass('domain-target') && !partnerNode.hasClass('protein-target')) {
-                    return true;
+                  if (partnerNode.hasClass('protein-target')) {
+                    return false;
                   }
                 }
-                return false;
+                return true;
               }).forEach(function (node, i) {
+                if (node.data("name") === "SOS1") console.log("TEST3 " + node.data("name"));
                 node.removeClass('matched');
                 node.addClass('unmatched');
                 if (node.hasClass('species1')) {
@@ -337,11 +338,11 @@ function loadFile(event) {
               }).filter(function(node) {
                 for (i=0; i<node.data('partners').length; i++) {
                   var partnerNode = cy.$('#' + node.data('partners')[i]);
-                  if (partnerNode.hasClass('predicted') && !partnerNode.hasClass('validated')) {
-                    return true;
+                  if (partnerNode.hasClass('validated')) {
+                    return false;
                   }
                 }
-                return false;
+                return true;
               }).forEach(function (node, i) {
                 node.removeClass('matched');
                 node.addClass('unmatched');
