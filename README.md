@@ -59,8 +59,6 @@ Users may wish to update these data sources at their own discretion. There is so
 * **Brian Law** - Primary developer
 * **Gary D. Bader** - Supervisor
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
 ## License
 
 This project is made available under the [GNU Public License 3.0](http://www.gnu.org/licenses/gpl-3.0.txt).
