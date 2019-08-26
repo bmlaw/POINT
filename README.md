@@ -31,62 +31,36 @@ To generate new POINT JSON files:
 
 ```
 1. Compile the Java files included in /java
-2. Run core.JsonTest with four arguments: species-of-interest-1 protein-of-interest-1 species-of-interest-2 protein-of-interest-2
+2. Run core.JsonTest with four arguments: 
+     species-of-interest-1 protein-of-interest-1 species-of-interest-2 protein-of-interest-2
 3. The output JSON file will be placed in web/json/
 ```
 
+## Data Sources
 
-## Running the tests
+Included with POINT are the following data files:
 
-Explain how to run the automated tests for this system
+1. Network data from [iRefIndex](http://irefindex.org/wiki/index.php?title=iRefIndex) v15.
+2. Domain, sequence, orthology, and identifier data from [Ensembl](http://www.ensembl.org) v89.
+3. Orthology data from [Homologene](https://www.ncbi.nlm.nih.gov/homologene) and [OrthoMCL](https://orthomcl.org/orthomcl/) downloaded c. May 2017.
+4. The [Molecular Interactions Controlled Ontology](https://www.ebi.ac.uk/ols/ontologies/mi) downloaded c. May 2017.
+5. SH3 interaction data from the [Bader Lab](http://www.baderlab.org).
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+Users may wish to update these data sources at their own discretion. There is source code provided to utilize BioGRID network data in Networks.java, which can be toggled in Constants.java.
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+* [Cytoscape.js](http://js.cytoscape.org/)
+* [Cytoscape Context Menus](https://github.com/iVis-at-Bilkent/cytoscape.js-context-menus)
+* [JSColor](http://jscolor.com) - Modified under the [GNU Public License 3.0](http://www.gnu.org/licenses/gpl-3.0.txt) from version 2.0.5, c. 2018.
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Brian Law** - Primary developer
+* **Gary D. Bader** - Supervisor
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
-
+This project is made available under the [GNU Public License 3.0](http://www.gnu.org/licenses/gpl-3.0.txt).
