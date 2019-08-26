@@ -13,9 +13,9 @@ Java 8 is required to execute included POINT source code to generate files for s
 
 Due to web browser security restrictions, POINT must be deployed over a web server. If you do not have a web server already set up, you can set one up easily using Python. You can download and install Python, 2 or 3, at http://www.python.org.
 
-### Installing
+### Instructions
 
-Setting up a web server:
+Utilizing POINT:
 
 ```
 1. Open a command prompt.
@@ -24,16 +24,17 @@ Setting up a web server:
      python3 -m http.server
    If using Python 2, enter:
      python -m SimpleHTTPServer
-4. Open a web browser and access POINT at http://localhost:8000/test.html
+4. Open a web browser and access POINT at http://localhost:8000/web/test.html
+5. Open a POINT JSON file using the available dialog.
+```
+To generate new POINT JSON files:
+
+```
+1. Compile the Java files included in /java
+2. Run core.JsonTest with four arguments: species-of-interest-1 protein-of-interest-1 species-of-interest-2 protein-of-interest-2
+3. The output JSON file will be placed in web/json/
 ```
 
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
